@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Docs Clone</title>
+</head>
+<body>
+<h1>My Documents</h1>
+<ul>
+{% for document in documents %}
+<li><a href="{{ url_for('view_document', id=document.id) }}">{{ document.title }}</a></li>
+{% endfor %}
+</ul>
+<a href="{{ url_for('create_document') }}">Create New Document</a>
+</body>
+</html>
+
+
