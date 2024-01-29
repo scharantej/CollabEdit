@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Docs Clone - Document</title>
+</head>
+<body>
+<h1>{{ document.title }}</h1>
+<form action="{{ url_for('edit_document', id=document.id) }}" method="POST">
+<textarea name="content">{{ document.content }}</textarea>
+<input type="submit" value="Save">
+</form>
+<a href="{{ url_for('share_document', id=document.id) }}">Share Document</a>
+</body>
+</html>
+
+
