@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Google Docs Clone - Share Document</title>
+</head>
+<body>
+<h1>Share Document</h1>
+<form action="{{ url_for('share_document', id=document.id) }}" method="POST">
+<label for="username">Username:</label>
+<input type="text" name="username" id="username">
+<br>
+<input type="submit" value="Share">
+</form>
+</body>
+</html>
+
+
